@@ -1,0 +1,9 @@
+select 
+  estoques.ESTOQUE_CODIGO
+, estoques.ESTOQUE_ITEM
+, estoques.ULTIMA_COMPRA
+, nomes.NOME
+from ESTOQUES
+left join NOMES on nomes.NOME_ID = estoques.EMPRESA_ID
+where estoques.ULTIMA_COMPRA <= '22.02.2025'
+order by estoques.ULTIMA_COMPRA desc
