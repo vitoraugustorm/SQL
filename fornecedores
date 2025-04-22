@@ -1,0 +1,14 @@
+select 
+  nomes.NOME_CODIGO
+, nomes.NOME
+, coalesce(nomes.CPF, nomes.cnpj) as CPF_OU_CNPJ
+, enderecos.ENDERECO_LOGRADOURO
+, bairros.BAIRRO_DESCRICAO
+, cidades.CIDADE_DESCRICAO
+, uf.UF_DESCRICAO 
+from nomes 
+left join CIDADES on cidades.CIDADE_ID = nomes.CIDADE_ID
+left join BAIRROS on bairros.BAIRRO_ID = nomes.BAIRRO_ID
+left join ENDERECOS on enderecos.ENDERECO_ID = nomes.ENDERECO_ID
+left join UF on uf.UF_ID = nomes.ESTADO_ID
+where nomes.tipo_nome = 'FORNECEDOR' and nomes.NOME like 'A%'
