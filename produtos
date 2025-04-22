@@ -1,0 +1,9 @@
+select
+ estoques.ESTOQUE_CODIGO
+,estoques.ESTOQUE_ITEM
+,grupos.GRUPO
+,estoques.VALOR_CUSTO
+,estoques.VALOR_VENDA
+from ESTOQUES
+left join GRUPOS on grupos.GRUPO_ID = estoques.GRUPO_ID
+where estoques.VALOR_VENDA < estoques.VALOR_CUSTO*0.5
