@@ -1,0 +1,9 @@
+select 
+  estoques.ESTOQUE_CODIGO
+, estoques.ESTOQUE_ITEM
+, grupos.GRUPO
+, estoques.VALOR_VENDA
+, estoques.CODIGO_ORIGINAL
+from ESTOQUES
+left join GRUPOS on grupos.GRUPO_ID = estoques.GRUPO_ID
+where estoques.GRUPO_ID = 2
