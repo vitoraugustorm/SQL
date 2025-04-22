@@ -1,0 +1,8 @@
+select 
+  nomes.NOME
+, pedidos.PEDIDO_ID
+, pedidos.DATA_ORCAMENTO
+, pedidos.total
+from PEDIDOS
+left join NOMES on nomes.NOME_ID = pedidos.CLIENTE_ID
+where pedidos.DATA_ORCAMENTO <= '22.03.2025'
