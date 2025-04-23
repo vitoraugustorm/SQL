@@ -5,4 +5,4 @@ select
 , pedidos.total
 from PEDIDOS
 left join NOMES on nomes.NOME_ID = pedidos.CLIENTE_ID
-where pedidos.DATA_ORCAMENTO <= '22.03.2025'
+where pedidos.DATA_ORCAMENTO <= current_date
