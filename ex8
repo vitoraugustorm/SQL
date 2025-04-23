@@ -1,0 +1,3 @@
+update ESTOQUES
+set ESTOQUES.QTDE = 'un'
+where estoques.QTDE = null
