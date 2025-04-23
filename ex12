@@ -1,0 +1,2 @@
+delete FROM PEDIDOS
+where pedidos.DATA_ORCAMENTO < '01.01.2022'
