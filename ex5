@@ -3,7 +3,7 @@ select
 , estoques.ESTOQUE_ITEM
 , grupos.GRUPO
 , estoques.VALOR_VENDA
-, estoques.CODIGO_ORIGINAL
+, (estoques.ESTOQUE_CODIGO )|| (estoques.VALOR_VENDA) || (substring(grupos.GRUPO from 1 for 4)) as CODIGO_ORIINAL
 from ESTOQUES
 left join GRUPOS on grupos.GRUPO_ID = estoques.GRUPO_ID
 where estoques.GRUPO_ID = 2
