@@ -1,0 +1,2 @@
+update NOMES 
+set nomes.NOME = upper(nomes.NOME)
