@@ -5,5 +5,5 @@ select
 , nomes.NOME
 from ESTOQUES
 left join NOMES on nomes.NOME_ID = estoques.EMPRESA_ID
-where estoques.ULTIMA_COMPRA <= '22.02.2025'
+where estoques.ULTIMA_COMPRA <= current_date
 order by estoques.ULTIMA_COMPRA desc
